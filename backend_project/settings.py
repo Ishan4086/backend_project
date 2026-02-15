@@ -23,9 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(7^yyka$1=eynz1*ho_^oc94#2al+6a1+zgi&^91w&jwh9dd*3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "ishan-poudel.com.np",
+    "www.ishan-poudel.com.np",
+    ".onrender.com"
+]
 
 
 # Application definition
@@ -55,7 +59,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Your React frontend
+    "http://localhost:5173",              # Local development
+    "https://ishan-poudel.com.np",        # Production domain
+    "https://www.ishan-poudel.com.np",    # If using www
 ]
 
 ROOT_URLCONF = 'backend_project.urls'
