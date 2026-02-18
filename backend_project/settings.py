@@ -102,6 +102,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://ishan-poudel.com.np",         # Portfolio domain
     "https://www.ishan-poudel.com.np",
     "https://your-backend-name.onrender.com",  # Add Render domain
+    "https://your-frontend-url.com", 
+    "http://localhost:5173",
 ]
 
 # CSRF configuration
@@ -109,6 +111,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://ishan-poudel.com.np",
     "https://www.ishan-poudel.com.np",
     "https://your-backend-name.onrender.com",
+    "https://your-frontend-url.com",
 ]
 
 # EmailJS doesn’t use Django email backend, so no need to configure SMTP
