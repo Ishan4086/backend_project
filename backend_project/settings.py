@@ -48,7 +48,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -58,11 +57,18 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",              # Local development
     "https://ishan-poudel.com.np",        # Production domain
     "https://www.ishan-poudel.com.np",    # If using www
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://ishan-poudel.com.np",
+    "https://www.ishan-poudel.com.np",
+]
+
 
 ROOT_URLCONF = 'backend_project.urls'
 
